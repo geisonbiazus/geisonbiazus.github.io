@@ -4,6 +4,10 @@ languageName = "English"
 title = 'Geison Biazus'
 theme = 'LoveIt'
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 # Menu config
 [menu]
   [[menu.main]]
