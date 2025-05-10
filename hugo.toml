@@ -8,6 +8,89 @@ theme = 'LoveIt'
   [caches.images]
     dir = ':cacheDir/images'
 
+
+[params]
+  # site default theme ["auto", "light", "dark"]
+  defaultTheme = "auto"
+  # public git repo url only then enableGitInfo is true
+  gitRepo = ""
+  # LoveIt NEW | 0.1.1 which hash function used for SRI, when empty, no SRI is used
+  # ["sha256", "sha384", "sha512", "md5"]
+  fingerprint = ""
+  # LoveIt NEW | 0.2.0 date format
+  dateFormat = "2006-01-02"
+  # website title for Open Graph and Twitter Cards
+  title = "Geison Biazus"
+  # website description for RSS, SEO, Open Graph and Twitter Cards
+  description = "Geison Biazus"
+  # website images for Open Graph and Twitter Cards
+  images = ["/logo.png"]
+
+  [params.author]
+    name = "Geison Biazus"
+    email = "geisonbiazus@gmail.com"
+    link = "https://github.com/geisonbiazus"
+
+  [params.header]
+    [params.header.title]
+      name = "Geison Biazus"
+      typeit = false
+    [params.header.social]
+      enable = true
+      GitHub = "https://github.com/geisonbiazus"
+      Linkedin = "https://www.linkedin.com/in/geisonbiazus"
+      X = "https://x.com/geisonbiazus"
+      RSS = true
+
+  [params.footer]
+    since = 2021
+
+  [params.home]
+    # LoveIt NEW | 0.2.0 amount of RSS pages
+    rss = 10
+    # Home page profile
+    [params.home.profile]
+      enable = true
+      gravatarEmail = "geisonbiazus@gmail.com"
+      title = "Geison Biazus"
+      subTitle = ""
+      typeit = false
+      social = true
+  [params.social]
+    GitHub = "https://github.com/geisonbiazus"
+    Linkedin = "https://www.linkedin.com/in/geisonbiazus"
+    X = "https://x.com/geisonbiazus"
+    RSS = true # LoveIt NEW | 0.2.0
+
+  [params.page.share]
+    enable = true
+    X = true
+    Threads = true
+    Facebook = true
+    Linkedin = true
+    Whatsapp = false
+    Pinterest = false
+    Tumblr = false
+    HackerNews = false
+    Reddit = false
+    VK = false
+    Buffer = false
+    Xing = false
+    Line = false
+    Instapaper = false
+    Pocket = false
+    Flipboard = false
+    Weibo = false
+    Blogger = false
+    Baidu = false
+    Odnoklassniki = false
+    Evernote = false
+    Skype = false
+    Trello = false
+    Diaspora = false
+    Mix = false
+    Telegram = false
+
 # Menu config
 [menu]
   [[menu.main]]
@@ -21,22 +104,6 @@ theme = 'LoveIt'
     url = "/posts/"
     # title will be shown when you hover on this menu link
     title = ""
-  [[menu.main]]
-    weight = 2
-    identifier = "tags"
-    pre = ""
-    post = ""
-    name = "Tags"
-    url = "/tags/"
-    title = ""
-  [[menu.main]]
-    weight = 3
-    identifier = "categories"
-    pre = ""
-    post = ""
-    name = "Categories"
-    url = "/categories/"
-    title = ""
 
 # Markup related configuration in Hugo
 [markup]
@@ -44,3 +111,6 @@ theme = 'LoveIt'
   [markup.highlight]
     # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
     noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
